@@ -1,13 +1,12 @@
 Countryplaces::Application.routes.draw do
-  get "static_pages/home"
 
-  get "static_pages/financing"
+  root to: 'pages#home'
+  match '/financing', to: 'pages#financing'
+  match '/properties', to: 'pages#properties'
+  match '/about', to: 'pages#about'
+  match '/contact', to: 'pages#contact'
+  match '/landblog', to: 'pages#landblog'
 
-  get "static_pages/about"
-
-  get "static_pages/contact"
-
-  get "static_pages/landblog"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
